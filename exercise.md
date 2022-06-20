@@ -5,7 +5,7 @@
 次の図と同じようになるように gnuplotの記述を追記せよ.
 
 - 関数は $y = f1(x) =2x^2\sqrt{x}-5x^2$ と $\displaystyle y= f2(x) = \frac{x}{\log{x}}$ とする
-- xの範囲を $0 \leq x \leq 1$ に，yの範囲を $-20 \leq y \leq 15$にする
+- xの範囲を $0 \leq x \leq 7$ に，yの範囲を $-20 \leq y \leq 15$にする
 - グラフのタイトル，x軸のラベル，y軸のラベルを付ける
 - 格子状の補助線を入れる
 

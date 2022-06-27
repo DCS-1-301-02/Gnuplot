@@ -7,6 +7,8 @@
 - 関数は $y = f1(x) =2x^2\sqrt{x}-5x^2$ と $\displaystyle y= f2(x) = \frac{x}{\log{x}}$ とする
 - xの範囲を $0 \leq x \leq 7$ に，yの範囲を $-20 \leq y \leq 15$にする
 - グラフのタイトル，x軸のラベル，y軸のラベルを付ける
+- 凡例として`f1(x)`と`f2(x)`を表示する
+
 - 格子状の補助線を入れる
 
 ![関数のプロット](funcplot.png)
@@ -23,6 +25,7 @@ set terminal svg
 - データファイルは `tokyo_covid19_all.dat`
 - データとして1列目と2列目を指定し，折れ線グラフにする
 - グラフのタイトル，x軸のラベル，y軸のラベルを付ける
+- 凡例を付ける
 - 格子状の補助線を入れる
 
 ![covid19](covid19.png)
@@ -60,4 +63,26 @@ data10='<grep "100歳以上" tokyo_covid19_2022.dat'
 # 見易くするために \ を入れて 改行 をしている．
 plot data0 using 1:3 with lines title "10歳未満",\
 data10 using 1:3 with lines title "100歳以上"
+```
+
+
+## 4. 八王子の気温
+
+次の図と同じようになるように gnuplotの記述を追記せよ.
+
+- データは `weather.csv` から取り出す
+  - CSV であることに注意
+- データとして1列目をx軸，2から5列目をy軸に指定し，
+折れ線グラフにし，凡例を付ける
+- グラフのタイトル，x軸のラベル，y軸のラベルを付ける
+- 格子状の補助線を入れる
+
+![weather](weather.png)
+
+```gnuplot {cmd=true, output="html"}
+set terminal svg
+set xdata time
+set timefmt '%Y/%m/%d'
+set xtics format "%m/%d"
+
 ```
